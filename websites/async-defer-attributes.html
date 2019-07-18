@@ -1,0 +1,24 @@
+<h1><code>script</code> 标签上 <code>defer</code> 与 <code>defer</code> 属性的区别?</h1>
+<h2>Answer</h2>
+<p>如果两个属性都不存在，则同步下载并执行脚本，并停止解析文档，直到它完成执行（默认行为）。脚本会按照遇到的顺序下载并执行。</p>
+<p><code>defer</code> 属性在文档仍在解析时下载脚本，但在执行之前一直等到文档完成解析，相当于在 <code>DOMContentLoaded</code> 事件监听器内执行。所有 <code>defer</code> 脚本将按顺序执行之后触发 <code>DOMContentLoaded</code>。</p>
+<p><code>async</code> 属性在解析文档时下载脚本，但会在完全解析之前暂停解析器执行脚本。&lt;code&gt;async&lt;/code&gt;脚本不一定按顺序执行。</p>
+<p>注：以上属性仅在 <code>script</code> 具有 <code>src</code> 属性时有效。（例如非内联）</p>
+<pre><code class="language-html">&lt;script src=&quot;myscript.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;myscript.js&quot; defer&gt;&lt;/script&gt;
+&lt;script src=&quot;myscript.js&quot; async&gt;&lt;/script&gt;
+</code></pre>
+<h2>Good to hear</h2>
+<ul>
+<li>在 <code>&lt;head&gt;</code> 中放置一个 <code>defer</code> 脚本允许浏览器在页面仍在解析时下载脚本，因此比在 <code>&lt;/body&gt;</code> 前放置脚本更好；</li>
+<li>如果 <code>scripts</code> 的执行需要依赖彼此，可以使用 <code>defer</code>；</li>
+<li>如果 <code>scripts</code> 的执行各自独立，可以使用 <code>async</code>；</li>
+<li>如果 <code>scripts</code> 的执行必须需要 <code>DOM</code> 已经解析完成，但是又不必须在 <code>DOMContentLoaded</code> 的事件侦听器中，可以使用 <code>defer</code>。</li>
+</ul>
+<h2>Additional links</h2>
+<p>&lt;!-- Whenever possible, link a more detailed explanation. --&gt;</p>
+<ul>
+<li><a href="http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html">async vs defer attributes</a></li>
+</ul>
+<p>&lt;!-- tags: (html) --&gt;</p>
+<p>&lt;!-- expertise: (1) --&gt;</p>
