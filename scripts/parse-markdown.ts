@@ -1,51 +1,51 @@
-const MarkdownIt = require('markdown-it')
-const fs = require('promise-fs')
-const htmlparser = require('htmlparser2')
-const {
-    resolve,
-    questionsDir,
-    websitesDir,
-    dataDir,
-    mdToHtml,
-    mdToAST,
+import * as FileHandler from "fs";
+import * as htmlparser from "htmlparser2";
+import * as MarkdownIt from "markdown-it";
+import {
     astToJson,
-} = require('./utils')
+    dataDir,
+    mdToAST,
+    mdToHtml,
+    questionsDir,
+    resolve,
+    websitesDir,
+} from "./utils";
 
-const md = new MarkdownIt()
-const parser = (html: string): Promise<[]> =>
+const { promises: fs } = FileHandler;
+const md = new MarkdownIt();
+const parserAsync = (html: string): Promise<htmlparser.DomElement[]> =>
     new Promise((resolve, reject) => {
-        const handler = new htmlparser.DomHandler(function(error, dom) {
-            if (error) reject(error)
-            else resolve(dom)
-        })
+        const handler = new htmlparser.DomHandler((error, dom) => {
+            if (error) { reject(error); } else { resolve(dom); }
+        });
 
-        const parser = new htmlparser.Parser(handler)
+        const parser = new htmlparser.Parser(handler);
 
-        parser.write(html)
-        parser.end()
-    })
+        parser.write(html);
+        parser.end();
+    });
 
 fs.readdir(questionsDir).then(async (files: string[]) => {
-    const readFilesAsync: Promise<Buffer>[] = files.map((file: string) =>
-        fs.readFile(resolve(file, questionsDir))
-    )
-    const BufferFiles: Buffer[] = await Promise.all(readFilesAsync)
+    const readFilesAsync: Array<Promise<Buffer>> = files.map((file: string) =>
+        fs.readFile(resolve(file, questionsDir)),
+    );
+    const BufferFiles: Buffer[] = await Promise.all(readFilesAsync);
 
     BufferFiles.forEach(async (item: Buffer, i: number) => {
-        const str: string = item.toString()
-        const html: string = md.render(str)
-        const file: string = files[i]
-        const content: [] = await parser(html)
+        const str: string = item.toString();
+        const html: string = md.render(str);
+        const file: string = files[i];
+        const content: htmlparser.DomElement[] = await parserAsync(html);
 
-        content.forEach(astToJson)
+        content.forEach(astToJson);
 
-        await fs.writeFile(resolve(mdToHtml(file), websitesDir), html)
+        await fs.writeFile(resolve(mdToHtml(file), websitesDir), html);
         await fs.writeFile(
             resolve(mdToAST(file), dataDir),
-            JSON.stringify(content)
-        )
-    })
-})
+            JSON.stringify(content),
+        );
+    });
+});
 // todo
 // * finish generate README
 // * finish questions
