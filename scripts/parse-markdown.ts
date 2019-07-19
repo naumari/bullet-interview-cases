@@ -46,3 +46,6 @@ fs.readdir(questionsDir).then(async (files: string[]) => {
         )
     })
 })
+// todo
+// * finish generate README
+// * finish questions

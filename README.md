@@ -1,4 +1,5 @@
-# bullet-interview-cases
+# Bullet interview cases
+
 > Short blurb about what your product does.
 
 [![NPM Version][npm-image]][npm-url]
@@ -7,7 +8,7 @@
 
 One to two paragraph statement about your product and what it does.
 
-![](header.png)
+![Logo](https://github.com/FatGe/bullet-interview-cases/blob/master/logo.svg)
 
 ## Installation
 
