@@ -1,4 +1,4 @@
-# `script` 标签上 `defer` 与 `async` 属性的区别?
+# `script` 标签上 `defer` 与 `async` 属性的区别
 
 ## Answer
 
@@ -24,8 +24,6 @@
 * 如果 `scripts` 的执行必须需要 `DOM` 已经解析完成，但是又不必须在 `DOMContentLoaded` 的事件侦听器中，可以使用 `defer`。
 
 ## Additional links
-
-<!-- Whenever possible, link a more detailed explanation. -->
 
 * [async vs defer attributes](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
 

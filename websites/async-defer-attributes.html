@@ -1,4 +1,4 @@
-<h1><code>script</code> 标签上 <code>defer</code> 与 <code>async</code> 属性的区别?</h1>
+<h1><code>script</code> 标签上 <code>defer</code> 与 <code>async</code> 属性的区别</h1>
 <h2>Answer</h2>
 <p>如果两个属性都不存在，则会按照顺序来加载并执行脚本，在这个过程中，会阻塞后续的DOM渲染。</p>
 <p><code>defer</code> 属性在文档仍在解析时下载脚本，但在执行之前一直等到文档完成解析，相当于在 <code>DOMContentLoaded</code> 事件调用前执行。所有 <code>defer</code> 脚本将按顺序执行之后触发 <code>DOMContentLoaded</code>。</p>
@@ -16,7 +16,6 @@
 <li>如果 <code>scripts</code> 的执行必须需要 <code>DOM</code> 已经解析完成，但是又不必须在 <code>DOMContentLoaded</code> 的事件侦听器中，可以使用 <code>defer</code>。</li>
 </ul>
 <h2>Additional links</h2>
-<p>&lt;!-- Whenever possible, link a more detailed explanation. --&gt;</p>
 <ul>
 <li><a href="http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html">async vs defer attributes</a></li>
 </ul>

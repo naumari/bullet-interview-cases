@@ -1,0 +1,25 @@
+<h1>'+' 和 '~' 这两个兄弟选择之前有什么不同</h1>
+<h2>Answer</h2>
+<p>通用选择器 <code>~</code> 选择所有指定元素的兄弟元素。</p>
+<p>以下示例选择所有<code>&lt;p&gt;</code>元素，它们是<code>&lt;div&gt;</code>元素的兄弟：</p>
+<p>相邻的兄弟选择器<code>+</code>选择所有与指定元素相邻的兄弟元素。</p>
+<pre><code class="language-html">div ~ p {
+  background-color: blue;
+}
+
+div + p {
+  background-color: red;
+}
+
+&lt;div&gt;&lt;/div&gt;
+&lt;p&gt;Hi world&lt;/p&gt;
+&lt;p&gt;Hello world&lt;/p&gt;
+</code></pre>
+<h2>Good to hear</h2>
+<h2>Additional links</h2>
+<ul>
+<li><a href="https://www.w3schools.com/css/css_combinators.asp">W3School's CSS Combinators Page</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors">Mozilla's Combinators and groups of selectors page</a></li>
+</ul>
+<p>&lt;!-- tags: (css) --&gt;</p>
+<p>&lt;!-- expertise: (2) --&gt;</p>
