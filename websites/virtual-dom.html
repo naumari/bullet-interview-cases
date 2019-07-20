@@ -1,11 +1,11 @@
 <h1>什么是虚拟DOM，为什么它被广泛地使用在库/框架中</h1>
 <h2>Answer</h2>
-<p>虚拟DOM（VDOM）是一种映射，利用JavaScript对象形式来表示真实DOM。这些对象具有描述它们所代表的真实DOM节点的属性：节点名称，其属性和子节点。</p>
+<p>虚拟DOM（VDOM）是一种映射，利用JavaScript对象形式来表示真实DOM。这些对象具有描述它们所代表的真实DOM节点的属性：节点名称，其属性和子节点。利用 VDOM 来映射到真实DOM的渲染，不需要包含操作DOM的方法，非常的轻量、简单。</p>
 <pre><code class="language-html">&lt;div class=&quot;counter&quot;&gt;
   &lt;h1&gt;0&lt;/h1&gt;
   &lt;button&gt;-&lt;/button&gt;
   &lt;button&gt;+&lt;/button&gt;
-&lt;/div&gt;
+&lt;/div&gt;r
 </code></pre>
 <p>用虚拟DOM表示可能如下所示：</p>
 <pre><code class="language-js">{
