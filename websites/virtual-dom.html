@@ -1,0 +1,44 @@
+<h1>什么是虚拟DOM，为什么它被广泛地使用在库/框架中</h1>
+<h2>Answer</h2>
+<p>虚拟DOM（VDOM）是一种映射，利用JavaScript对象形式来表示真实DOM。这些对象具有描述它们所代表的真实DOM节点的属性：节点名称，其属性和子节点。</p>
+<pre><code class="language-html">&lt;div class=&quot;counter&quot;&gt;
+  &lt;h1&gt;0&lt;/h1&gt;
+  &lt;button&gt;-&lt;/button&gt;
+  &lt;button&gt;+&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<p>用虚拟DOM表示可能如下所示：</p>
+<pre><code class="language-js">{
+  nodeName: &quot;div&quot;,
+  attributes: { class: &quot;counter&quot; },
+  children: [
+    {
+      nodeName: &quot;h1&quot;,
+      attributes: {},
+      children: [0]
+    },
+    {
+      nodeName: &quot;button&quot;,
+      attributes: {},
+      children: [&quot;-&quot;]
+    },
+    {
+      nodeName: &quot;button&quot;,
+      attributes: {},
+      children: [&quot;+&quot;]
+    }
+  ]
+}
+</code></pre>
+<p>一般库/框架使用虚拟DOM作为提高性能的手段。当应用程序的状态发生变化时，真实的DOM节点需要相应地做出变化。但是，与重新计算虚拟DOM相比，更改真实DOM节点的成本很高。相比之下，可以非常快速地将先前的虚拟DOM与新的虚拟DOM进行比较。</p>
+<p>一旦旧的VDOM和新的VDOM之间的变化已经由框架的差异引擎计算得出，那么真正的DOM可以在最短的时间内有效地得到更新以匹配应用程序的新状态。</p>
+<h2>Good to hear</h2>
+<ul>
+<li>为什么访问DOM会如此昂贵。</li>
+</ul>
+<h2>Additional links</h2>
+<ul>
+<li><a href="http://reactkungfu.com/2015/10/the-difference-between-virtual-dom-and-dom/">The difference between Virtual DOM and DOM</a></li>
+</ul>
+<p>&lt;!-- tags: (javascript) --&gt;</p>
+<p>&lt;!-- expertise: (2) --&gt;</p>

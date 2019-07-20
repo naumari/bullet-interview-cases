@@ -1,0 +1,22 @@
+<h1>请解释下静态方法和实例方法之间的区别</h1>
+<h2>Answer</h2>
+<p>静态方法属于一个类，不作用于实例，而实例方法属于类的原型，它由类的所有实例继承并作用于它们。</p>
+<pre><code class="language-js">Array.isArray // Array 的静态方法
+Array.prototype.push // Array 的实例方法
+</code></pre>
+<p>在这种情况下，<code>Array.isArray</code> 方法作为数组的实例方法没有意义，因为我们已经知道在处理数组时该值是一个数组。</p>
+<p>实例方法在技术上可以作为静态方法工作，但提供了更简洁的语法：</p>
+<pre><code class="language-js">const arr = [1, 2, 3]
+arr.push(4)
+Array.push(arr, 4)
+</code></pre>
+<h2>Good to hear</h2>
+<ul>
+<li>如何利用 ES2015 class 的语法来创建静态、实例方法</li>
+</ul>
+<h2>Additional links</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">Classes on MDN</a></li>
+</ul>
+<p>&lt;!-- tags: (javascript) --&gt;</p>
+<p>&lt;!-- expertise: (2) --&gt;</p>

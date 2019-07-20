@@ -1,0 +1,113 @@
+# 在Javascript中，`this` 指针是什么？它是怎样工作的
+
+## Answer
+
+`this` 指针表示执行函数的上下文的对象。
+
+### Object literals
+
+```js
+var myObject = {
+  property: this,
+  regularFunction: function() {
+    return this
+  },
+  arrowFunction: () => {
+    return this
+  },
+  iife: (function() {
+    return this
+  })()
+}
+
+myObject.regularFunction() // 指向 myObject
+myObject["regularFunction"]() // 指向 myObject
+
+myObject.property // 指向 lexical `this` 而非 myObject
+myObject.arrowFunction() // 指向 lexical `this` 而非 myObject
+myObject.iife // 指向 lexical `this` 而非 myObject
+const regularFunction = myObject.regularFunction
+regularFunction() // 指向 lexical `this` 而非 myObject
+```
+
+### Event listeners
+
+`this` refers to the element listening to the event.
+
+```js
+document.body.addEventListener("click", function() {
+    console.log(this) // document.body
+})
+document.body.addEventListener("click", () => {
+    console.log(this) // 指向 lexical `this` 而非 document.body
+})
+```
+
+### Constructors
+
+```js
+class Example {
+  constructor() {
+    console.log(this) // myExample
+  }
+}
+const myExample = new Example()
+```
+
+### Manual
+
+使用`call` 和 `apply` 可以强制改变 `this` 的指向，使它指向作为第一个参数传递的对象。
+
+```js
+var myFunction = function() {
+  return this
+}
+myFunction.call({ customThis: true }) // { customThis: true }
+```
+
+### Unwanted `this`
+
+因为`this`可以根据范围而改变，所以当使用常规函数时它可能具有意外的值。
+
+```js
+var obj = {
+  arr: [1, 2, 3],
+  doubleArr() {
+    return this.arr.map(function(value) {
+      // this is now this.arr
+      return this.double(value)
+    })
+  },
+  double(value) {
+    return value * 2
+  }
+}
+var otherObj = {
+  arr: [1, 2, 3],
+  doubleArr() {
+    return this.arr.map(value => {
+      // this 指向 otherObj
+      return this.double(value)
+    })
+  },
+  double(value) {
+    return value * 2
+  }
+}
+obj.doubleArr() // 1, 2, 3
+```
+
+## Good to hear
+
+* 在严格模式在，全局的 `this` 为 `undefined`，但是在非严格模式下 `this` 指向全局对象（游览器中是 `window`）；
+* `Function.prototype.call` 和 `Function.prototype.apply` 将执行函数的 `this` 上下文设置为第一个参数；
+* `Function.prototype.bind` 返回一个新函数，强制执行 `this` 上下文作为第一个参数，不能被其他函数更改；
+* 如果一个函数要求根据它的调用方式改变它的 `this` 上下文，你必须使用 `function` 关键字。当你想要“this”作为周围（词汇）上下文时，请使用箭头函数。
+
+## Additional links
+
+* [`this` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+
+<!-- tags: (javascript) -->
+
+<!-- expertise: (2) -->

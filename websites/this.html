@@ -1,0 +1,91 @@
+<h1>在Javascript中，<code>this</code> 指针是什么？它是怎样工作的</h1>
+<h2>Answer</h2>
+<p><code>this</code> 指针表示执行函数的上下文的对象。</p>
+<h3>Object literals</h3>
+<pre><code class="language-js">var myObject = {
+  property: this,
+  regularFunction: function() {
+    return this
+  },
+  arrowFunction: () =&gt; {
+    return this
+  },
+  iife: (function() {
+    return this
+  })()
+}
+
+myObject.regularFunction() // 指向 myObject
+myObject[&quot;regularFunction&quot;]() // 指向 myObject
+
+myObject.property // 指向 lexical `this` 而非 myObject
+myObject.arrowFunction() // 指向 lexical `this` 而非 myObject
+myObject.iife // 指向 lexical `this` 而非 myObject
+const regularFunction = myObject.regularFunction
+regularFunction() // 指向 lexical `this` 而非 myObject
+</code></pre>
+<h3>Event listeners</h3>
+<p><code>this</code> refers to the element listening to the event.</p>
+<pre><code class="language-js">document.body.addEventListener(&quot;click&quot;, function() {
+    console.log(this) // document.body
+})
+document.body.addEventListener(&quot;click&quot;, () =&gt; {
+    console.log(this) // 指向 lexical `this` 而非 document.body
+})
+</code></pre>
+<h3>Constructors</h3>
+<pre><code class="language-js">class Example {
+  constructor() {
+    console.log(this) // myExample
+  }
+}
+const myExample = new Example()
+</code></pre>
+<h3>Manual</h3>
+<p>使用<code>call</code> 和 <code>apply</code> 可以强制改变 <code>this</code> 的指向，使它指向作为第一个参数传递的对象。</p>
+<pre><code class="language-js">var myFunction = function() {
+  return this
+}
+myFunction.call({ customThis: true }) // { customThis: true }
+</code></pre>
+<h3>Unwanted <code>this</code></h3>
+<p>因为<code>this</code>可以根据范围而改变，所以当使用常规函数时它可能具有意外的值。</p>
+<pre><code class="language-js">var obj = {
+  arr: [1, 2, 3],
+  doubleArr() {
+    return this.arr.map(function(value) {
+      // this is now this.arr
+      return this.double(value)
+    })
+  },
+  double(value) {
+    return value * 2
+  }
+}
+var otherObj = {
+  arr: [1, 2, 3],
+  doubleArr() {
+    return this.arr.map(value =&gt; {
+      // this 指向 otherObj
+      return this.double(value)
+    })
+  },
+  double(value) {
+    return value * 2
+  }
+}
+obj.doubleArr() // 1, 2, 3
+</code></pre>
+<h2>Good to hear</h2>
+<ul>
+<li>在严格模式在，全局的 <code>this</code> 为 <code>undefined</code>，但是在非严格模式下 <code>this</code> 指向全局对象（游览器中是 <code>window</code>）；</li>
+<li><code>Function.prototype.call</code> 和 <code>Function.prototype.apply</code> 将执行函数的 <code>this</code> 上下文设置为第一个参数；</li>
+<li><code>Function.prototype.bind</code> 返回一个新函数，强制执行 <code>this</code> 上下文作为第一个参数，不能被其他函数更改；</li>
+<li>如果一个函数要求根据它的调用方式改变它的 <code>this</code> 上下文，你必须使用 <code>function</code> 关键字。当你想要“this”作为周围（词汇）上下文时，请使用箭头函数。</li>
+</ul>
+<h2>Additional links</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code> on MDN</a></li>
+</ul>
+<p>&lt;!-- tags: (javascript) --&gt;</p>
+<p>&lt;!-- expertise: (2) --&gt;</p>
