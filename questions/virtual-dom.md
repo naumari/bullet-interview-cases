@@ -2,14 +2,14 @@
 
 ## Answer
 
-虚拟DOM（VDOM）是一种映射，利用JavaScript对象形式来表示真实DOM。这些对象具有描述它们所代表的真实DOM节点的属性：节点名称，其属性和子节点。
+虚拟DOM（VDOM）是一种映射，利用JavaScript对象形式来表示真实DOM。这些对象具有描述它们所代表的真实DOM节点的属性：节点名称，其属性和子节点。利用 VDOM 来映射到真实DOM的渲染，不需要包含操作DOM的方法，非常的轻量、简单。
 
 ```html
 <div class="counter">
   <h1>0</h1>
   <button>-</button>
   <button>+</button>
-</div>
+</div>r
 ```
 
 用虚拟DOM表示可能如下所示：

@@ -64,9 +64,9 @@ myObject = "hello" // Error
 ## Good to hear
 
 * 所有声明都应该在其作用域的顶部;
-* 然而，使用`let`和`const`，有一个称为暂时死区（TDZ）的概念。意思是说由let/const声明的变量，当它们包含的词法环境(Lexical Environment)被实例化时会被创建，但只有在变量的词法绑定(LexicalBinding)已经被求值运算后，才能够被访问;
-* 显示使用`var`以及`let`如何解决它的常见问题，以及保持`var`的解决方案;
-* 应尽可能避免使用`var`，并且更喜欢`const`作为所有变量的默认声明语句，除非它们稍后会被重新分配，那就应当使用`let`。
+* 然而，使用 `let` 和 `const`，有一个称为暂时死区（TDZ）的概念。意思是说由let/const声明的变量，当它们包含的词法环境(Lexical Environment)被实例化时会被创建，但只有在变量的词法绑定(LexicalBinding)已经被求值运算后，才能够被访问;
+* 显示使用 `var` 以及 `let` 如何解决它的常见问题，以及保持 `var` 的解决方案;
+* 应尽可能避免使用 `var`，并且更喜欢 `const` 作为所有变量的默认声明语句，除非它们稍后会被重新分配，那就应当使用 `let`。
 
 ## Additional links
 
