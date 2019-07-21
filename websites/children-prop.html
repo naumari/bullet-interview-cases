@@ -1,0 +1,23 @@
+<h1>在 React 中 <code>children</code> 属性的作用什么</h1>
+<h2>Answer</h2>
+<p><code>children</code> 是传递给组件的props对象的一部分，它允许将组件作为数据传递给其他组件，从而提供了优雅地组合组件。React API中有许多方法可用于此prop，例如 <code>React.Children.map</code>, <code>React.Children.forEach</code>, <code>React.Children.count</code>, <code>React.Children.only</code> 以及 <code>React.Children.toArray</code>。</p>
+<pre><code class="language-js">function GenericBox({ children }) {
+  return &lt;div className=&quot;container&quot;&gt;{children}&lt;/div&gt;
+}
+
+function App() {
+  return (
+    &lt;GenericBox&gt;
+      &lt;span&gt;Hello&lt;/span&gt; &lt;span&gt;World&lt;/span&gt;
+    &lt;/GenericBox&gt;
+  )
+}
+</code></pre>
+<h2>Good to hear</h2>
+<ul>
+<li>Children是一个prop，可以将组件作为数据传递给其他组件;</li>
+<li>React API提供了使用此prop的方法。</li>
+</ul>
+<h2>Additional links</h2>
+<p>&lt;!-- tags: (react,javascript) --&gt;</p>
+<p>&lt;!-- expertise: (1) --&gt;</p>

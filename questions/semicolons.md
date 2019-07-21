@@ -31,8 +31,6 @@ const previousLine = 3
 
 ## Additional links
 
-<!-- Whenever possible, link a more detailed explanation. -->
-
 <!-- tags: (javascript) -->
 
 <!-- expertise: (1) -->

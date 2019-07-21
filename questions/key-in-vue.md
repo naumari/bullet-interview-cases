@@ -6,7 +6,7 @@ key 的特殊属性主要用在 Vue 的虚拟 DOM 算法，在新旧 nodes 对�
 
 但是由于 Vue 正在更新使用 v-for 渲染的元素列表时，它默认使用“就地更新”的策略。如果数据项的顺序被改变，Vue 将不会移动 DOM 元素来匹配数据项的顺序，而是就地更新每个元素，并且确保它们在每个索引位置正确渲染。所以如果遍历输出的 DOM 内容非常简单，或者是刻意依赖默认行为以获取性能上的提升，可以选择不加 key 属性。
 
-在 [Vue 源码](https://github.com/vuejs/vue/blob/dev/src/core/vdom/patch.js) 中，主要涉及两个函数 `sameVnode`，`patchVnode`
+在 Vue 源码 中，主要涉及两个函数 `sameVnode`，`patchVnode`
 
 ```js
 function sameVnode (a, b) {
