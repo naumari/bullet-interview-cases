@@ -1,0 +1,14 @@
+<h1>React 中 context 代表什么</h1>
+<h2>Answer</h2>
+<p>Context 提供了一种通过组件树传递数据的方法，而无需在每个级别手动传递 props。
+例如，需要在应用程序中通过许多组件访问经过身份验证的用户，区域设置首选项，UI主题。</p>
+<pre><code class="language-js">const { Provider, Consumer } = React.createContext(defaultValue)
+</code></pre>
+<h2>Good to hear</h2>
+<ul>
+<li>Context 提供了一种通过 React 组件树传递数据的方法，而无需手动传递 props.</li>
+<li>Context 旨在为 React 组件树提供可共享的 <em>global</em> 数据。</li>
+</ul>
+<h2>Additional links</h2>
+<p>&lt;!-- tags: (javascript, react) --&gt;</p>
+<p>&lt;!-- expertise: (0) --&gt;</p>

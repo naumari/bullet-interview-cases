@@ -1,0 +1,15 @@
+<h1>构建一个数组，内容到第 n 项的 Fibonacci 序列</h1>
+<h2>Answer</h2>
+<pre><code class="language-js">const fibonacci = n =&gt;
+  [...Array(n)].reduce(
+    (acc, val, i) =&gt; acc.concat(i &gt; 1 ? acc[i - 1] + acc[i - 2] : i),
+    []
+  )
+</code></pre>
+<h2>Good to hear</h2>
+<h2>Additional links</h2>
+<ul>
+<li><a href="https://github.com/Chalarangelo/30-seconds-of-code/blob/master/snippets_archive/fibonacciUntilNum.md">Similar problem</a></li>
+</ul>
+<p>&lt;!-- tags: (javascript) --&gt;</p>
+<p>&lt;!-- expertise: (1) --&gt;</p>
