@@ -1,0 +1,37 @@
+<h1>如何实现一个 <code>instanceof</code></h1>
+<pre><code class="language-js">function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+var auto = new Car('Honda', 'Accord', 1998);
+
+console.log(auto instanceof Car);
+// expected output: true
+
+console.log(auto instanceof Object);
+// expected output: true
+</code></pre>
+<h2>Answer</h2>
+<p><code>instanceof</code> 运算符用于测试构造函数的 <code>prototype</code> 属性是否出现在对象的原型链中的任何位置</p>
+<pre><code class="language-js">function usrInstanceOf (obj, proto) {
+    let _proto = obj.__proto__
+
+    while(_proto !== null) {
+        if (_proto === proto.prototype) return true
+        _proto = _proto.__proto__
+    }
+
+    return false
+}
+
+console.log(usrInstanceOf(auto, Car));
+// expected output: true
+
+console.log(usrInstanceOf(auto, Object));
+// expected output: true
+</code></pre>
+<h2>Good to hear</h2>
+<h2>Additional links</h2>
+<p>&lt;!-- tags: (javascript) --&gt;</p>
+<p>&lt;!-- expertise: (0) --&gt;</p>
