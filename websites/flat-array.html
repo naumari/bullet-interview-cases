@@ -1,0 +1,24 @@
+<h1>将数组扁平化并去除其中重复数据，最终得到一个升序且不重复的数组</h1>
+<h2>Answer</h2>
+<ul>
+<li>利用递归</li>
+</ul>
+<pre><code class="language-js">Array.prototype.flat= function() {
+    return [].concat(...this.map(item =&gt; (Array.isArray(item) ? item.flat() : [item])));
+}
+
+Array.prototype.unique = function() {
+    return [...new Set(this)]
+}
+
+console.log(arr.flat().unique().sort((a, b) =&gt; a - b))
+</code></pre>
+<ul>
+<li>利用 toString</li>
+</ul>
+<pre><code class="language-js">[...new Set(arr.toString().split(','))].sort((a,b) =&gt; a-b)
+</code></pre>
+<h2>Good to hear</h2>
+<h2>Additional links</h2>
+<p>&lt;!-- tags: (javascript) --&gt;</p>
+<p>&lt;!-- expertise: (0) --&gt;</p>

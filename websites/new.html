@@ -1,0 +1,25 @@
+<h1>如何实现一个 <code>new</code></h1>
+<h2>Answer</h2>
+<pre><code class="language-js">function usrNew (constructor, ...arg) {
+    let _obj = {}
+
+    Object.setPrototypeOf(obj, constructor.prototype)
+    constructor.apply(_obj, arg)
+    return _obj
+}
+</code></pre>
+<p>或者</p>
+<pre><code class="language-js">function usrNew (constructor, ...arg) {
+    let _obj = Object.create(constructor.prototype)
+
+    constructor.apply(_obj, arg)
+    return _obj
+}
+</code></pre>
+<h2>Good to hear</h2>
+<ul>
+<li>对于 <code>prototype</code> 的处理。</li>
+</ul>
+<h2>Additional links</h2>
+<p>&lt;!-- tags: (javascript) --&gt;</p>
+<p>&lt;!-- expertise: (0) --&gt;</p>
