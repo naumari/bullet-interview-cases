@@ -7,11 +7,11 @@
 <li>它只需要注册一个事件监听器来处理所有元素，从而提高性能并减少内存消耗；</li>
 <li>如果元素动态添加到父元素，则无需为它们注册新的事件侦听器。</li>
 </ul>
-<pre><code class="language-js">document.querySelectorAll(&quot;button&quot;).forEach(button =&gt; {
+<pre><code class="language-es6">document.querySelectorAll(&quot;button&quot;).forEach(button =&gt; {
   button.addEventListener(&quot;click&quot;, handleButtonClick)
 })
 </code></pre>
-<pre><code class="language-js">document.addEventListener(&quot;click&quot;, e =&gt; {
+<pre><code class="language-es6">document.addEventListener(&quot;click&quot;, e =&gt; {
   if (e.target.closest(&quot;button&quot;)) {
     handleButtonClick()
   }

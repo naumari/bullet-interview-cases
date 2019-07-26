@@ -8,7 +8,7 @@
 ```css
 ```
 
-```js
+```es6
 ```
 
 ## Answer
@@ -23,7 +23,7 @@
 ```css
 ```
 
-```js
+```es6
 ```
 
 ## Good to hear

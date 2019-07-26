@@ -2,13 +2,13 @@
 <h2>Answer</h2>
 <p>事件驱动编程是一种范例，主要涉及两个部分：构建发出和接收事件的应用程序。当程序发出事件时，程序通过将已经注册到该元素的事件运行在上下文的回调函数来响应，并将相关数据传递给该函数。使用此模式，即使没有订阅任何函数，也可以将事件发送出来而不会抛出错误。</p>
 <p>一个常见的例子是监听DOM事件的元素模式，例如<code>click</code>和<code>mouseenter</code>，其中在事件发生时运行回调函数。</p>
-<pre><code class="language-js">document.addEventListener(&quot;click&quot;, function(event) {
+<pre><code class="language-es6">document.addEventListener(&quot;click&quot;, function(event) {
   // This callback function is run when the user
   // clicks on the document.
 })
 </code></pre>
 <p>脱离DOM的上下文，此模式可能会变为</p>
-<pre><code class="language-js">const hub = createEventHub()
+<pre><code class="language-es6">const hub = createEventHub()
 hub.on(&quot;message&quot;, function(data) {
   console.log(`${data.username} said ${data.text}`)
 })

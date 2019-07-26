@@ -6,7 +6,7 @@
 
 组件是函数或类。组件可以具有state并将props作为输入并返回元素树作为输出（尽管它们可以表示通用容器或包装器，并且不一定有DOM）。组件也可以在生命周期方法中组一些处理（例如，AJAX请求，DOM突变，与第三方库的接口），并且创建的代价可能很大。
 
-```js
+```es6
 const Component = () => "Hello"
 const componentElement = <Component />
 const domNodeElement = <div />

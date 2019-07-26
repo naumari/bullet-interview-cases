@@ -2,7 +2,7 @@
 
 ## Answer
 
-```js
+```es6
 function usrNew (constructor, ...arg) {
     let _obj = {}
 
@@ -14,7 +14,7 @@ function usrNew (constructor, ...arg) {
 
 或者
 
-```js
+```es6
 function usrNew (constructor, ...arg) {
     let _obj = Object.create(constructor.prototype)
 

@@ -12,7 +12,7 @@
 
 例如，在执行`setTimeout`回调时，循环已经完成，`i`变量为'10`，因此所有十个回调都引用了函数作用域中可用的相同变量。
 
-```js
+```es6
 for (var i = 0; i < 10; i++) {
   setTimeout(() => {
     // logs `10` ten times
@@ -42,7 +42,7 @@ for (var i = 0; i < 10; i++) {
 
 `let` 在ES2015中引入，是声明后将重新赋值的变量的首选方式。但是如果尝试再次重新声明变量将导致错误。此外它是块作用域的，因此在循环中使用它将使其作用于迭代。
 
-```js
+```es6
 for (let i = 0; i < 10; i++) {
   setTimeout(() => {
     // logs 0, 1, 2, 3, ...
@@ -55,7 +55,7 @@ for (let i = 0; i < 10; i++) {
 
 `const` 在ES2015中引入，如果变量以后不会被重新赋值，那么它是首选的声明方式。此外它存在与块状作用域，不能重新赋值。
 
-```js
+```es6
 const myObject = {}
 myObject.prop = "hello!" // No error
 myObject = "hello" // Error

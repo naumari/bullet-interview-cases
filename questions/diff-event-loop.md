@@ -8,7 +8,7 @@
 
 执行当前的 macroTask（宏任务），紧接着会执行完当前的 microTask（微任务）
 
-```js
+```es6
 for (macroTask of macroTaskQueue) {
     // 1. 处理 macroTask
     handleMacroTask();

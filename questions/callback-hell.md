@@ -1,6 +1,6 @@
 # 如何避免回调地狱
 
-```js
+```es6
 getData(function(a) {
   getMoreData(a, function(b) {
     getMoreData(b, function(c) {
@@ -18,7 +18,7 @@ getData(function(a) {
 
 重构函数以返回promises并使用 `async / await` 通常是最好的选择。它们不会向函数提供导致深度嵌套的回调，而是返回一个可以“等待”的承诺，并在数据到达后解析，允许以类似同步的方式执行下一行代码。
 
-```js
+```es6
 async function asyncAwaitVersion() {
   const a = await getData()
   const b = await getMoreData(a)

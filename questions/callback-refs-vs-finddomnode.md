@@ -4,7 +4,7 @@
 
 callback refs 比 `findDOMNode` API更受欢迎，因为 `findDOMNode` 阻止了将来React的某些改进。
 
-```js
+```es6
 // Legacy approach using findDOMNode()
 class MyComponent extends Component {
   componentDidMount() {

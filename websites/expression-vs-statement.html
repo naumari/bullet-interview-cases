@@ -11,7 +11,7 @@
 <p>如果您可以打印它或将其分配给变量，那么它就是一个表达式。如果你不能，那就是一个声明。</p>
 </blockquote>
 <h3>声明</h3>
-<pre><code class="language-js">let x = 0
+<pre><code class="language-es6">let x = 0
 
 function declaration() {}
 
@@ -19,7 +19,7 @@ if (true) {
 }
 </code></pre>
 <p>语句显示为执行某些操作但不生成值的指令。</p>
-<pre><code class="language-js">// Assign `x` to the absolute value of `y`.
+<pre><code class="language-es6">// Assign `x` to the absolute value of `y`.
 var x
 if (y &gt;= 0) {
   x = y
@@ -30,7 +30,7 @@ if (y &gt;= 0) {
 <p>上面代码中唯一的表达式是“y&gt; = 0”，它产生一个值，即“true”或“false”。代码的其他部分不会生成值。</p>
 <h3>表达式</h3>
 <p>表达式产生一个价值。 它们可以传递给函数，因为解释器用它们解析的值替换它们。</p>
-<pre><code class="language-js">5 + 5 // =&gt; 10
+<pre><code class="language-es6">5 + 5 // =&gt; 10
 
 lastCharacter(&quot;input&quot;) // =&gt; &quot;t&quot;
 
@@ -38,7 +38,7 @@ true === true // =&gt; true
 </code></pre>
 <h3>表达式声明</h3>
 <p>使用条件运算符来完成之前表达式语句的等效版本：</p>
-<pre><code class="language-js">// Assign `x` as the absolute value of `y`.
+<pre><code class="language-es6">// Assign `x` as the absolute value of `y`.
 var x = y &gt;= 0 ? y : -y
 </code></pre>
 <p>这既是表达式又是语句，因为我们将变量<code>x</code>（语句）声明为求值（表达式）。</p>

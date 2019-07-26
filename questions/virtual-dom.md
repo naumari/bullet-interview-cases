@@ -14,7 +14,7 @@
 
 用虚拟DOM表示可能如下所示：
 
-```js
+```es6
 {
   nodeName: "div",
   attributes: { class: "counter" },

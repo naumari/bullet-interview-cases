@@ -1,7 +1,7 @@
 <h1>React 中 Fragment 代表什么</h1>
 <h2>Answer</h2>
 <p>Fragment允许React组件在没有包装器的情况下返回多个元素，具体方法是在不向DOM添加额外元素的情况下对子元素进行分组。Fragment提供更好的性能，更低的内存使用率，更清晰的DOM，并且可以帮助处理某些CSS机制（例如表格，Flexbox和网格）。</p>
-<pre><code class="language-js">render() {
+<pre><code class="language-es6">render() {
   return (
     &lt;React.Fragment&gt;
       &lt;ChildA /&gt;

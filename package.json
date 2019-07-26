@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "parse": "ts-node ./scripts/parse-markdown",
-    "lint": "eslint --ext md .",
+    "lint": "eslint --fix --ext md .",
     "lint:ts": "tslint --fix 'scripts/**/*.ts'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

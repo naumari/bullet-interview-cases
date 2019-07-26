@@ -2,7 +2,7 @@
 <h2>Answer</h2>
 <p>元素通常用来表示DOM节点或组件的纯JavaScript对象。元素是纯粹的，从不转换，并且创建的代价很小。</p>
 <p>组件是函数或类。组件可以具有state并将props作为输入并返回元素树作为输出（尽管它们可以表示通用容器或包装器，并且不一定有DOM）。组件也可以在生命周期方法中组一些处理（例如，AJAX请求，DOM突变，与第三方库的接口），并且创建的代价可能很大。</p>
-<pre><code class="language-js">const Component = () =&gt; &quot;Hello&quot;
+<pre><code class="language-es6">const Component = () =&gt; &quot;Hello&quot;
 const componentElement = &lt;Component /&gt;
 const domNodeElement = &lt;div /&gt;
 </code></pre>

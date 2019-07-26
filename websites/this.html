@@ -4,7 +4,7 @@
 <code>this</code> 不是编译时绑定，而是运行时绑定。它依赖于函数调用的上下文条件。<code>this</code> 绑定与函数声明的位置没有任何关系，而与函数被调用的方式紧密相连。
 它指针表示执行函数的上下文的对象。</p>
 <h3>Object literals</h3>
-<pre><code class="language-js">var myObject = {
+<pre><code class="language-es6">var myObject = {
   property: this,
   regularFunction: function() {
     return this
@@ -28,7 +28,7 @@ regularFunction() // 指向 lexical `this` 而非 myObject
 </code></pre>
 <h3>Event listeners</h3>
 <p><code>this</code> refers to the element listening to the event.</p>
-<pre><code class="language-js">document.body.addEventListener(&quot;click&quot;, function() {
+<pre><code class="language-es6">document.body.addEventListener(&quot;click&quot;, function() {
     console.log(this) // document.body
 })
 document.body.addEventListener(&quot;click&quot;, () =&gt; {
@@ -36,7 +36,7 @@ document.body.addEventListener(&quot;click&quot;, () =&gt; {
 })
 </code></pre>
 <h3>Constructors</h3>
-<pre><code class="language-js">class Example {
+<pre><code class="language-es6">class Example {
   constructor() {
     console.log(this) // myExample
   }
@@ -45,14 +45,14 @@ const myExample = new Example()
 </code></pre>
 <h3>Manual</h3>
 <p>使用<code>call</code> 和 <code>apply</code> 可以强制改变 <code>this</code> 的指向，使它指向作为第一个参数传递的对象。</p>
-<pre><code class="language-js">var myFunction = function() {
+<pre><code class="language-es6">var myFunction = function() {
   return this
 }
 myFunction.call({ customThis: true }) // { customThis: true }
 </code></pre>
 <h3>Unwanted <code>this</code></h3>
 <p>因为<code>this</code>可以根据范围而改变，所以当使用常规函数时它可能具有意外的值。</p>
-<pre><code class="language-js">var obj = {
+<pre><code class="language-es6">var obj = {
   arr: [1, 2, 3],
   doubleArr() {
     return this.arr.map(function(value) {

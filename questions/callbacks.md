@@ -6,7 +6,7 @@
 
 例如，事件侦听器是异步回调，仅在发生特定事件时执行。
 
-```js
+```es6
 function onClick() {
   console.log("The user clicked on the page.")
 }
@@ -14,7 +14,7 @@ function onClick() {
 
 但是，回调也可以是同步的。下面的 `map` 函数接受一个回调函数，该函数为循环的每次迭代（数组元素）同步调用。
 
-```js
+```es6
 const map = (arr, callback) => {
   const result = []
   for (let i = 0; i < arr.length; i++) {

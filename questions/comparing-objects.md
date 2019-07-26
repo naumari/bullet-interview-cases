@@ -8,7 +8,7 @@
 为了测试两个对象在结构上是否相等，需要一个辅助函数。它会迭代每个对象的属性以测试它们是否具有相同的值，包括嵌套对象。
 可选地，也可以通过传递 `true` 作为第三个参数来测试对象的原型的等效性。
 
-```js
+```es6
 function isDeepEqual(obj1, obj2, testPrototypes = false) {
   if (obj1 === obj2) {
     return true

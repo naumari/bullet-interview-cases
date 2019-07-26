@@ -4,7 +4,7 @@
 
 Stateful class component 是一种行为取决于其状态的组件。这意味着如果给出相同的prop，则组件的两个单独实例不一定会呈现相同的输出，这与纯函数组件不同。
 
-```js
+```es6
 // Stateful class component
 class App extends Component {
   constructor(props) {

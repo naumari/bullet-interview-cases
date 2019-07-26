@@ -5,7 +5,7 @@
 Context 提供了一种通过组件树传递数据的方法，而无需在每个级别手动传递 props。
 例如，需要在应用程序中通过许多组件访问经过身份验证的用户，区域设置首选项，UI主题。
 
-```js
+```es6
 const { Provider, Consumer } = React.createContext(defaultValue)
 ```
 

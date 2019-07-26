@@ -11,13 +11,13 @@ DOM事件通过`Event.target`来提供触发事件元素的有用信息。同时
 * 它只需要注册一个事件监听器来处理所有元素，从而提高性能并减少内存消耗；
 * 如果元素动态添加到父元素，则无需为它们注册新的事件侦听器。
 
-```js
+```es6
 document.querySelectorAll("button").forEach(button => {
   button.addEventListener("click", handleButtonClick)
 })
 ```
 
-```js
+```es6
 document.addEventListener("click", e => {
   if (e.target.closest("button")) {
     handleButtonClick()

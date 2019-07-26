@@ -6,7 +6,7 @@
 
 一个常见的例子是监听DOM事件的元素模式，例如`click`和`mouseenter`，其中在事件发生时运行回调函数。
 
-```js
+```es6
 document.addEventListener("click", function(event) {
   // This callback function is run when the user
   // clicks on the document.
@@ -15,7 +15,7 @@ document.addEventListener("click", function(event) {
 
 脱离DOM的上下文，此模式可能会变为
 
-```js
+```es6
 const hub = createEventHub()
 hub.on("message", function(data) {
   console.log(`${data.username} said ${data.text}`)

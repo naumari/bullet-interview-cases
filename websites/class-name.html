@@ -1,18 +1,18 @@
 <h1>为什么 React 的 HTML 中要使用 <code>className</code> 来代替 <code>class</code></h1>
 <h2>Answer</h2>
 <p>React的理念一开始就是与浏览器 DOM API 一致而不是 HTML，因为它更接近地表示了元素的创建方式。在元素上设置<code>class</code>意味着使用<code>className</code> API：</p>
-<pre><code class="language-js">const element = document.createElement(&quot;div&quot;)
+<pre><code class="language-es6">const element = document.createElement(&quot;div&quot;)
 element.className = &quot;hello&quot;
 </code></pre>
 <p>此外，在ES5之前，保留字不能用于对象：</p>
-<pre><code class="language-js">const element = {
+<pre><code class="language-es6">const element = {
   attributes: {
     class: &quot;hello&quot;
   }
 }
 </code></pre>
 <p>在 IE8 中，这将会引起错误。在现代环境中，如果尝试分配变量，解构将引发错误：</p>
-<pre><code class="language-js">const { class } = this.props // Error
+<pre><code class="language-es6">const { class } = this.props // Error
 const { className } = this.props // All good
 const { class: className } = this.props // All good, but cumbersome!
 </code></pre>

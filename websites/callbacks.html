@@ -2,12 +2,12 @@
 <h2>Answer</h2>
 <p>回调是作为参数传递给另一个函数的函数，该函数在事件发生或某个任务完成后执行，通常在异步代码中使用。回调函数稍后由一段代码调用，但可以在初始化时声明而不被调用.</p>
 <p>例如，事件侦听器是异步回调，仅在发生特定事件时执行。</p>
-<pre><code class="language-js">function onClick() {
+<pre><code class="language-es6">function onClick() {
   console.log(&quot;The user clicked on the page.&quot;)
 }
 </code></pre>
 <p>但是，回调也可以是同步的。下面的 <code>map</code> 函数接受一个回调函数，该函数为循环的每次迭代（数组元素）同步调用。</p>
-<pre><code class="language-js">const map = (arr, callback) =&gt; {
+<pre><code class="language-es6">const map = (arr, callback) =&gt; {
   const result = []
   for (let i = 0; i &lt; arr.length; i++) {
     result.push(callback(arr[i], i))

@@ -3,7 +3,7 @@
 <ul>
 <li>利用递归</li>
 </ul>
-<pre><code class="language-js">Array.prototype.flat= function() {
+<pre><code class="language-es6">Array.prototype.flat= function() {
     return [].concat(...this.map(item =&gt; (Array.isArray(item) ? item.flat() : [item])));
 }
 
@@ -16,7 +16,7 @@ console.log(arr.flat().unique().sort((a, b) =&gt; a - b))
 <ul>
 <li>利用 toString</li>
 </ul>
-<pre><code class="language-js">[...new Set(arr.toString().split(','))].sort((a,b) =&gt; a-b)
+<pre><code class="language-es6">[...new Set(arr.toString().split(','))].sort((a,b) =&gt; a-b)
 </code></pre>
 <h2>Good to hear</h2>
 <h2>Additional links</h2>

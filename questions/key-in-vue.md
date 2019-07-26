@@ -8,7 +8,7 @@ key 的特殊属性主要用在 Vue 的虚拟 DOM 算法，在新旧 nodes 对�
 
 在 Vue 源码 中，主要涉及两个函数 `sameVnode`，`patchVnode`
 
-```js
+```es6
 function sameVnode (a, b) {
   return (
     a.key === b.key && (

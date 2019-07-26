@@ -8,7 +8,7 @@
 
 ### Object literals
 
-```js
+```es6
 var myObject = {
   property: this,
   regularFunction: function() {
@@ -36,7 +36,7 @@ regularFunction() // 指向 lexical `this` 而非 myObject
 
 `this` refers to the element listening to the event.
 
-```js
+```es6
 document.body.addEventListener("click", function() {
     console.log(this) // document.body
 })
@@ -47,7 +47,7 @@ document.body.addEventListener("click", () => {
 
 ### Constructors
 
-```js
+```es6
 class Example {
   constructor() {
     console.log(this) // myExample
@@ -60,7 +60,7 @@ const myExample = new Example()
 
 使用`call` 和 `apply` 可以强制改变 `this` 的指向，使它指向作为第一个参数传递的对象。
 
-```js
+```es6
 var myFunction = function() {
   return this
 }
@@ -71,7 +71,7 @@ myFunction.call({ customThis: true }) // { customThis: true }
 
 因为`this`可以根据范围而改变，所以当使用常规函数时它可能具有意外的值。
 
-```js
+```es6
 var obj = {
   arr: [1, 2, 3],
   doubleArr() {

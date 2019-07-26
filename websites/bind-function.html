@@ -2,7 +2,7 @@
 <h2>Answer</h2>
 <p>返回一个接受任意数量参数的函数，通过用其余的 <code>...</code> 运算符收集它们。
 从该函数返回使用 <code>Function.prototype.apply</code> 调用fn的结果，将上下文和参数数组应用于函数。</p>
-<pre><code class="language-js">const bind = (fn, context) =&gt; (...args) =&gt; fn.apply(context, args)
+<pre><code class="language-es6">const bind = (fn, context) =&gt; (...args) =&gt; fn.apply(context, args)
 </code></pre>
 <h2>Good to hear</h2>
 <h2>Additional links</h2>

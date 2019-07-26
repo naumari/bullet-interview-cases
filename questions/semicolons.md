@@ -8,14 +8,14 @@
 
 * 以 `[` 开头
 
-```js
+```es6
 const previousLine = 3
 ;[1, 2, previousLine].map(n => n * 2)
 ```
 
 * 以 `(` 开头
 
-```js
+```es6
 const previousLine = 3
 ;(function() {
   // ...

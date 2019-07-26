@@ -1,6 +1,6 @@
 # 如何实现一个 `instanceof`
 
-```js
+```es6
 function Car(make, model, year) {
   this.make = make;
   this.model = model;
@@ -19,7 +19,7 @@ console.log(auto instanceof Object);
 
 `instanceof` 运算符用于测试构造函数的 `prototype` 属性是否出现在对象的原型链中的任何位置
 
-```js
+```es6
 function usrInstanceOf (obj, proto) {
     let _proto = obj.__proto__
 

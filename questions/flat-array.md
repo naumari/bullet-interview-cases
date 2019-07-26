@@ -4,7 +4,7 @@
 
 * 利用递归
 
-```js
+```es6
 Array.prototype.flat= function() {
     return [].concat(...this.map(item => (Array.isArray(item) ? item.flat() : [item])));
 }
@@ -18,7 +18,7 @@ console.log(arr.flat().unique().sort((a, b) => a - b))
 
 * 利用 toString
 
-```js
+```es6
 [...new Set(arr.toString().split(','))].sort((a,b) => a-b)
 ```
 

@@ -4,7 +4,7 @@
 
 静态方法属于一个类，不作用于实例，而实例方法属于类的原型，它由类的所有实例继承并作用于它们。
 
-```js
+```es6
 Array.isArray // Array 的静态方法
 Array.prototype.push // Array 的实例方法
 ```
@@ -13,7 +13,7 @@ Array.prototype.push // Array 的实例方法
 
 实例方法在技术上可以作为静态方法工作，但提供了更简洁的语法：
 
-```js
+```es6
 const arr = [1, 2, 3]
 arr.push(4)
 Array.push(arr, 4)

@@ -1,5 +1,5 @@
 <h1>如何实现一个 <code>instanceof</code></h1>
-<pre><code class="language-js">function Car(make, model, year) {
+<pre><code class="language-es6">function Car(make, model, year) {
   this.make = make;
   this.model = model;
   this.year = year;
@@ -14,7 +14,7 @@ console.log(auto instanceof Object);
 </code></pre>
 <h2>Answer</h2>
 <p><code>instanceof</code> 运算符用于测试构造函数的 <code>prototype</code> 属性是否出现在对象的原型链中的任何位置</p>
-<pre><code class="language-js">function usrInstanceOf (obj, proto) {
+<pre><code class="language-es6">function usrInstanceOf (obj, proto) {
     let _proto = obj.__proto__
 
     while(_proto !== null) {

@@ -1,0 +1,30 @@
+<h1>纯函数是什么</h1>
+<h2>Answer</h2>
+<p>纯函数是满足以下两个条件的函数：</p>
+<ul>
+<li>给定相同的输入，该函数返回相同的输出。</li>
+<li>该函数不会在函数范围之外引起副作用（即修改函数外的数据或提供给函数的数据）。</li>
+</ul>
+<p>纯函数可以在函数内改变局部数据，只要它满足上述两个条件即可。</p>
+<h3>纯净</h3>
+<pre><code class="language-es6">const a = (x, y) =&gt; x + y
+const b = (arr, value) =&gt; arr.concat(value)
+const c = arr =&gt; [...arr].sort((a, b) =&gt; a - b)
+</code></pre>
+<h3>非纯净</h3>
+<pre><code class="language-es6">const a = (x, y) =&gt; x + y + Math.random()
+const b = (arr, value) =&gt; (arr.push(value), arr)
+const c = arr =&gt; arr.sort((a, b) =&gt; a - b)
+</code></pre>
+<h2>Good to hear</h2>
+<ul>
+<li>由于其可靠性，纯函数更容易理解;</li>
+<li>除非明确地产生副作用（即<code>setInnerHTML</code>），否则所有函数都应该是纯函数;</li>
+<li>如果函数未返回值，则表明它正在引起副作用。</li>
+</ul>
+<h2>Additional links</h2>
+<ul>
+<li><a href="http://www.nicoespeon.com/en/2015/01/pure-functions-javascript/">Pure functions in JavaScript</a></li>
+</ul>
+<p>&lt;!-- tags: (javascript) --&gt;</p>
+<p>&lt;!-- expertise: (2) --&gt;</p>
