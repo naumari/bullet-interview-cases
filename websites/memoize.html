@@ -1,0 +1,26 @@
+<h1>memoization 是什么</h1>
+<h2>Answer</h2>
+<p>memoization 是一种优化技术，主要用于通过存储昂贵的函数调用的结果来加速计算机程序，并在再次发生相同的输入时返回缓存的结果。</p>
+<p>在 JavaScript 中的实现如下</p>
+<pre><code class="language-es6">const memoize = fn =&gt; {
+  const cache = new Map()
+  return value =&gt; {
+    const cachedResult = cache.get(value)
+    if (cachedResult !== undefined) return cachedResult
+    const result = fn(value)
+    cache.set(value, result)
+    return result
+  }
+}
+</code></pre>
+<h2>Good to hear</h2>
+<ul>
+<li>memoization 是一个空间换时间的方式，存储执行结果，下次再次发生相同的输入会直接输出结果，提高了执行的速度;</li>
+<li>memoization 是一种优化技术，避免一些不必要的重复计算，可以提高计算速度。</li>
+</ul>
+<h2>Additional links</h2>
+<ul>
+<li><a href="https://www.sitepoint.com/implementing-memoization-in-javascript/">Implementing memoization in JavaScript</a></li>
+</ul>
+<p>&lt;!-- tags: (javascript) --&gt;</p>
+<p>&lt;!-- expertise: (2) --&gt;</p>

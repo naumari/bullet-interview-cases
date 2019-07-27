@@ -1,0 +1,16 @@
+<h1>React中组件的生命周期可以分为那几个阶段</h1>
+<h2>Answer</h2>
+<p>组件生命周期主要有四个不同的阶段：</p>
+<p><strong>Initialization</strong>: 在此阶段，组件准备设置初始State和默认Prop;</p>
+<p><strong>Mounting</strong>: react组件已经挂载到DOM。此阶段涵盖了 <code>getDerivedStateFromProps</code> 和 <code>componentDidMount</code> 生命周期方法;</p>
+<p><strong>Updating</strong>: 在此阶段，组件以两种方式更新，发送新的Prop并更新State。此阶段包括 <code>getDerivedStateFromProps</code>，<code>shouldComponentUpdate</code>，<code>getSnapshotBeforeUpdate</code> 和 <code>componentDidUpdate</code> 生命周期方法;</p>
+<p><strong>Unmounting</strong>: 在最后阶段，需要将组件从DOM中卸载。此阶段包括 <code>componentWillUnmount</code> 生命周期方法;</p>
+<p><strong>Error Handling</strong>: 在此阶段，只要在渲染期间，生命周期方法或任何子组件的构造函数中出现错误，就会调用该组件。这个阶段包括<code>componentDidCatch</code> 生命周期方法。</p>
+<p>&lt;img alt=&quot;lifecycle phases&quot; src=&quot;https://pbs.twimg.com/media/DZ-97vzW4AAbcZj.jpg:large&quot; style=&quot;width: 100%&quot;/&gt;</p>
+<h2>Good to hear</h2>
+<h2>Additional links</h2>
+<ul>
+<li><a href="https://fatge.github.io/2019/07/26/react-lifecycle/">React v16 生命周期函数详解：如何、何时使用它们（React 组件生命周期的修订和最新指南）</a></li>
+</ul>
+<p>&lt;!-- tags: (react) --&gt;</p>
+<p>&lt;!-- expertise: (1) --&gt;</p>

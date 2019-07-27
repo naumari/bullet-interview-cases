@@ -1,0 +1,46 @@
+<h1>如何确保 methods 在 React 组件类中具有正确的 <code>this</code> 上下文</h1>
+<h2>Answer</h2>
+<p>在JavaScript类中，默认情况下是不对方法进行绑定的。
+这意味着它们的 <code>this</code> 上下文可以更改（在事件处理程序的情况下，更改为正在侦听事件的元素），并且不会引用组件实例。
+为了解决这个问题，可以使用 <code>Function.prototype.bind</code> 来强制执行 <code>this</code> 上下文作为组件实例</p>
+<pre><code class="language-es6">constructor(props) {
+  super(props);
+  this.handleClick = this.handleClick.bind(this);
+}
+
+handleClick() {
+  // Perform some logic
+}
+</code></pre>
+<ul>
+<li><code>bind</code>方法可能很冗长，同时还需要定义一个 <code>constructor</code>，所以通常首选新的公共类字段语法。</li>
+</ul>
+<pre><code class="language-es6">handleClick = () =&gt; {
+  console.log('this is:', this);
+}
+
+render() {
+  return (
+    &lt;button onClick={this.handleClick}&gt;
+      Click me
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<ul>
+<li>您还可以使用内联箭头函数，使得<code>this</code>（指代组件实例）被保留：</li>
+</ul>
+<pre><code class="language-es6">&lt;button onClick={e =&gt; this.handleClick(e)}&gt;Click me&lt;/button&gt;
+</code></pre>
+<p>请注意，使用此技术会引起额外的重新渲染，因为在渲染时会创建新的函数引用, 如果将它传递给子组件会使得 <code>shouldComponentUpdate</code> / <code>PureComponent</code> 浅层相等检测来防止不必要的渲染这个能力失效。在性能很重要的情况下，最好在构造函数中使用 <code>bind</code>，或者使用公共类字段语法方法，因为函数引用保持不变。</p>
+<h2>Good to hear</h2>
+<ul>
+<li>您可以将方法绑定到构造函数中的组件实例上下文，使用公共类字段语法或使用内联箭头函数。</li>
+</ul>
+<h2>Additional links</h2>
+<ul>
+<li><a href="https://reactjs.org/docs/handling-events.html">React docs on Handling Events</a></li>
+<li><a href="https://reactjs.org/docs/faq-functions.html#how-do-i-bind-a-function-to-a-component-instance">React docs on Passing Functions to Components</a></li>
+</ul>
+<p>&lt;!-- tags: (react,javascript) --&gt;</p>
+<p>&lt;!-- expertise: (2) --&gt;</p>

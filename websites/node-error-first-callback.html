@@ -1,0 +1,55 @@
+<h1>NodeJS经常使用回调模式，如果在执行期间遇到错误，此错误作为回调的第一个参数传递。这种模式的优点是什么</h1>
+<pre><code class="language-es6">fs.readFile(filePath, function(err, data) {
+  if (err) {
+    // handle the error, the return is important here
+    // so execution stops here
+    return console.log(err)
+  }
+  // use the data object
+  console.log(data)
+})
+</code></pre>
+<h2>Answer</h2>
+<p>优势在于:</p>
+<ul>
+<li>如果不需要引用数据，则无需处理数据;</li>
+<li>拥有一致的API可以带来更多的复用;</li>
+<li>能够轻松调整回调模式，从而实现更易维护的代码。</li>
+</ul>
+<p>从下面的示例中可以看出，如果没有错误，则调用回调，并将null作为其第一个参数。但是，如果出现错误，则创建一个Error对象，然后该对象将成为回调唯一的参数。这种回调函数模式可以使用户容易地知道是否发生了错误。</p>
+<p>这种做法也称 <em>Node.js error convention</em>，这种回调实现称为 <em>error-first callbacks</em>。</p>
+<pre><code class="language-es6">var isTrue = function(value, callback) {
+  if (value === true) {
+    callback(null, &quot;Value was true.&quot;)
+  } else {
+    callback(new Error(&quot;Value is not true!&quot;))
+  }
+}
+
+var callback = function(error, retval) {
+  if (error) {
+    console.log(error)
+    return
+  }
+  console.log(retval)
+}
+
+isTrue(false, callback)
+isTrue(true, callback)
+
+/*
+  { stack: [Getter/Setter],
+    arguments: undefined,
+    type: undefined,
+    message: 'Value is not true!' }
+  Value was true.
+*/
+</code></pre>
+<h2>Good to hear</h2>
+<h2>Additional links</h2>
+<ul>
+<li><a href="http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/">The Node.js Way - Understanding Error-First Callbacks</a></li>
+<li><a href="https://docs.nodejitsu.com/articles/errors/what-are-the-error-conventions">What are the error conventions?</a></li>
+</ul>
+<p>&lt;!-- tags: (node,javascript) --&gt;</p>
+<p>&lt;!-- expertise: (1) --&gt;</p>

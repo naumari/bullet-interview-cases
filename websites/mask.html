@@ -1,0 +1,18 @@
+<h1>创建一个用 <code>#</code> 屏蔽字符串的函数，除了最后四（4）个字符</h1>
+<pre><code class="language-js">mask(&quot;123456789&quot;) // &quot;#####6789&quot;
+</code></pre>
+<h2>Answer</h2>
+<blockquote>
+<p>有许多种方法来实现这个需求，下面展示其中一种</p>
+</blockquote>
+<p>使用 <code>String.prototype.slice</code> 来获取字符串的后四个字符。然后使用 <code>String.prototype.padStart</code> 来将 <code>#</code> 填充至字符串中。</p>
+<pre><code class="language-es6">const mask = (str, maskChar = &quot;#&quot;) =&gt;
+  str.slice(-4).padStart(str.length, maskChar)
+</code></pre>
+<h2>Good to hear</h2>
+<ul>
+<li>如果解决方案有效，应该首选简短的函数式问题解决方案</li>
+</ul>
+<h2>Additional links</h2>
+<p>&lt;!-- tags: (javascript) --&gt;</p>
+<p>&lt;!-- expertise: (1) --&gt;</p>
