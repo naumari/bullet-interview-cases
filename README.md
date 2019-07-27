@@ -8,7 +8,7 @@
 
 One to two paragraph statement about your product and what it does.
 
-![Logo](https://github.com/FatGe/bullet-interview-cases/blob/master/logo.svg)
+![Logo](https://github.com/FatGe/bullet-interview-cases/blob/master/assets/logo.svg)
 
 ## Installation
 
