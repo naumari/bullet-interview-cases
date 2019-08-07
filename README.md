@@ -72,8 +72,9 @@ Distributed under the XYZ license. See ``LICENSE`` for more information.
 
 ## 题库来源
 
-1. [javascript-puzzlers](http://javascript-puzzlers.herokuapp.com/)
-2. [每日壹题及答案汇总](https://muyiy.vip/blog/)
+1. [30-seconds-of-interviews](https://github.com/30-seconds/30-seconds-of-interviews);
+2. [javascript-puzzlers](http://javascript-puzzlers.herokuapp.com/);
+3. [每日壹题及答案汇总](https://muyiy.vip/blog/)。
 
 <!-- Markdown link & img dfn's -->
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square

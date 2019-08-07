@@ -13,7 +13,8 @@
             "severity": "warning",
             "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
         },
-        "no-shadowed-variable": false
+        "no-shadowed-variable": false,
+        "max-classes-per-file": [true, 5, "exclude-class-expressions"]
     },
     "jsRules": {
         "max-line-length": {

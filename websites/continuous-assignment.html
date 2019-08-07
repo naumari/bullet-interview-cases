@@ -1,0 +1,34 @@
+<h1>以下代码会输出什么</h1>
+<pre><code class="language-es6">let a = { n: 1 }
+let b = a
+
+a.x = a = { n: 2 }
+
+console.log(a)
+console.log(a.x)
+
+console.log(b)
+console.log(b.x)
+</code></pre>
+<h2>Answer</h2>
+<pre><code class="language-es6">let a = { n: 1 }
+let b = a
+
+a.x = a = { n: 2 }
+
+console.log(a) // { n: 2 }
+console.log(a.x) // undefined
+
+console.log(b) // { n: 1, x: { n: 2 } }
+console.log(b.x) // { n: 2 }
+</code></pre>
+<p><code>.</code> 运算优先于 <code>=</code> 赋值运算，因此此处赋值可理解为</p>
+<ul>
+<li>声明 <code>a</code> 对象中的 <code>x</code> 属性，用于赋值，此时 <code>b</code> 指向 <code>a</code>，同时拥有未赋值的 <code>x</code> 属性;</li>
+<li>对 <code>a</code> 对象赋值，此时变量名 <code>a</code> 改变指向到对象 <code>{ n: 2 }</code>;</li>
+<li>对步骤1中 <code>x</code> 属性，也即 <code>a</code> 原指向对象的 <code>x</code> 属性，也即 <code>b</code> 指向对象的 <code>x</code> 属性赋值。</li>
+</ul>
+<h2>Good to hear</h2>
+<h2>Additional links</h2>
+<p>&lt;!-- tags: (javascript) --&gt;</p>
+<p>&lt;!-- expertise: (1) --&gt;</p>

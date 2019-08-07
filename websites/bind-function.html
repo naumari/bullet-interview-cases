@@ -4,6 +4,18 @@
 从该函数返回使用 <code>Function.prototype.apply</code> 调用fn的结果，将上下文和参数数组应用于函数。</p>
 <pre><code class="language-es6">const bind = (fn, context) =&gt; (...args) =&gt; fn.apply(context, args)
 </code></pre>
+<pre><code class="language-es6">Function.prototype.myBind = function (objThis, ...params) {
+    const thisFn = this
+
+    let fToBind = function (...secondParams) {
+        const isNew = this instanceof fToBind
+        const context = isNew ? this : Object(objThis)
+        return thisFn.apply(context, ...params, ...secondParams)
+    }
+    fToBind.prototype = Object.create(thisFn.prototype)
+    return fToBind
+}
+</code></pre>
 <h2>Good to hear</h2>
 <h2>Additional links</h2>
 <p>&lt;!-- tags: (javascript) --&gt;</p>

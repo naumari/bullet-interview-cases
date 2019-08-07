@@ -9,6 +9,20 @@
 const bind = (fn, context) => (...args) => fn.apply(context, args)
 ```
 
+```es6
+Function.prototype.myBind = function (objThis, ...params) {
+    const thisFn = this
+
+    let fToBind = function (...secondParams) {
+        const isNew = this instanceof fToBind
+        const context = isNew ? this : Object(objThis)
+        return thisFn.apply(context, ...params, ...secondParams)
+    }
+    fToBind.prototype = Object.create(thisFn.prototype)
+    return fToBind
+}
+```
+
 ## Good to hear
 
 ## Additional links

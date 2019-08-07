@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+      "dev": "ts-node ./scripts/factory",
     "parse": "ts-node ./scripts/parse-markdown",
     "lint": "eslint --fix --ext md .",
     "lint:ts": "tslint --fix 'scripts/**/*.ts'",
