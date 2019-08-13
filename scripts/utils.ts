@@ -14,11 +14,3 @@ export const mdToHtml = (url: string): string =>
 
 export const mdToAST = (url: string): string =>
     `${path.basename(url, ".md")}.json`;
-
-export const astToJson = (ast) => {
-    Object.keys(ast).forEach((key) => {
-        if (key === "next" || key === "prev" || key === "parent") { delete ast[key]; }
-        if (Array.isArray(ast[key])) { ast[key].forEach((item) => astToJson(item)); }
-        if (typeof ast[key] === "object") { ast[key] = astToJson[key]; }
-    });
-};

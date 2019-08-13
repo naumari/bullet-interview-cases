@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "dev": "ts-node ./scripts/factory",
+    "dev": "ts-node ./scripts/factory",
     "parse": "ts-node ./scripts/parse-markdown",
     "lint": "eslint --fix --ext md .",
     "lint:ts": "tslint --fix 'scripts/**/*.ts'",
@@ -32,7 +32,7 @@
     "@types/htmlparser2": "^3.10.1",
     "@types/markdown-it": "0.0.8",
     "@types/node": "^12.6.6",
-    "html-to-json": "^0.6.0",
+    "himalaya": "^1.1.0",
     "htmlparser2": "^3.10.1",
     "markdown-it": "^9.0.1",
     "node-html-parser": "^1.1.16",
