@@ -14,3 +14,12 @@ export const mdToHtml = (url: string): string =>
 
 export const mdToAST = (url: string): string =>
     `${path.basename(url, ".md")}.json`;
+
+export const textToLang: {
+    [propName: string]: string,
+} = {
+    "language-css": "css",
+    "language-es6": "javascript",
+    "language-html": "html",
+    "language-js": "javascript",
+};

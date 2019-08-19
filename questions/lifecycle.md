@@ -1,6 +1,6 @@
 # React中组件的生命周期可以分为那几个阶段
 
-## Answer
+## 参考答案
 
 组件生命周期主要有四个不同的阶段：
 
@@ -16,9 +16,9 @@
 
 <img alt="lifecycle phases" src="https://pbs.twimg.com/media/DZ-97vzW4AAbcZj.jpg:large" style="width: 100%"/>
 
-## Good to hear
+## 关键点
 
-## Additional links
+## 额外参考
 
 * [React v16 生命周期函数详解：如何、何时使用它们（React 组件生命周期的修订和最新指南）](https://fatge.github.io/2019/07/26/react-lifecycle/)
 

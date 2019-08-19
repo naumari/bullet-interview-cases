@@ -1,6 +1,6 @@
 # 在 JavaScript 中如何判断两个对象相等
 
-## Answer
+## 参考答案
 
 尽管两个不同的对象使用相同的值具有相同的属性，但使用 `==` 或 `===` 进行比较时，可能会得不到你期望的结果。
 这是因为比较操作是通过它们的引用（内存中的位置）进行比较，而不是比较的原始值。
@@ -49,12 +49,12 @@ function isDeepEqual(obj1, obj2, testPrototypes = false) {
 }
 ```
 
-## Good to hear
+## 关键点
 
 * 字符串和数字等原语按其值进行比较;
 * 对象通过它们的引用（内存中的位置）进行比较。
 
-## Additional links
+## 额外参考
 
 <!-- tags: (javascript) -->
 

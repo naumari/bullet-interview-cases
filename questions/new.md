@@ -1,6 +1,6 @@
 # 如何实现一个 `new`
 
-## Answer
+## 参考答案
 
 ```es6
 function usrNew (constructor, ...arg) {
@@ -23,11 +23,11 @@ function usrNew (constructor, ...arg) {
 }
 ```
 
-## Good to hear
+## 关键点
 
 * 对于 `prototype` 的处理。
 
-## Additional links
+## 额外参考
 
 <!-- tags: (javascript) -->
 

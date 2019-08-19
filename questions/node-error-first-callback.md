@@ -12,7 +12,7 @@ fs.readFile(filePath, function(err, data) {
 })
 ```
 
-## Answer
+## 参考答案
 
 优势在于:
 
@@ -53,9 +53,9 @@ isTrue(true, callback)
 */
 ```
 
-## Good to hear
+## 关键点
 
-## Additional links
+## 额外参考
 
 * [The Node.js Way - Understanding Error-First Callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)
 * [What are the error conventions?](https://docs.nodejitsu.com/articles/errors/what-are-the-error-conventions)

@@ -1,6 +1,6 @@
 # 使用CSS sprites有什么好处？如何使用它们
 
-## Answer
+## 参考答案
 
 CSS sprites 技术将多个图像组合成一个图像，从而减少了浏览器HTTP请求的数量来缩短了加载时间。即使在新的HTTP / 2协议下，这仍然是正确的。
 
@@ -8,11 +8,11 @@ CSS sprites 技术将多个图像组合成一个图像，从而减少了浏览�
 
 要在CSS中使用spritesheet，可以使用某些属性，例如 `background-image`，`background-position` 和 `background-size`来最终改变元素的背景。
 
-## Good to hear
+## 关键点
 
 * `background-image`, `background-position`, `background-size` 被用来生成 Sprites。
 
-## Additional links
+## 额外参考
 
 * [CSS Sprites explained by CSS Tricks](https://css-tricks.com/css-sprites/)
 

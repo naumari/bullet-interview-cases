@@ -1,6 +1,6 @@
 # 在 JavaScript 中如何浅复制一个对象
 
-## Answer
+## 参考答案
 
 使用对象扩展运算符 `...`，可以复制对象自己的可枚举属性到新的对象。完成对象的浅层克隆。
 
@@ -17,12 +17,12 @@ const shallowClone = { ...obj }
 * `Object.assign({}, obj)` 大体上等同于 {{}, ...obj}.
 * `Object.keys(obj).reduce((acc, key) => (acc[key] = obj[key], acc), {})` 是另一个更冗长的替代方案，更深入地展示了这个概念。
 
-## Good to hear
+## 关键点
 
 * JavaScript通过引用传递对象，这意味着嵌套对象将复制它们的引用，而不是它们的值。
 * 可以使用相同的方法合并两个对象。
 
-## Additional links
+## 额外参考
 
 <!-- tags: (javascript) -->
 

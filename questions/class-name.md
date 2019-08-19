@@ -1,6 +1,6 @@
 # 为什么 React 的 HTML 中要使用 `className` 来代替 `class`
 
-## Answer
+## 参考答案
 
 React的理念一开始就是与浏览器 DOM API 一致而不是 HTML，因为它更接近地表示了元素的创建方式。在元素上设置`class`意味着使用`className` API：
 
@@ -29,9 +29,9 @@ const { class: className } = this.props // All good, but cumbersome!
 
 但是，`class` 可以毫无问题地用作 prop，如Preact等其他库中所见。React 目前允许你使用 `class`，但会抛出警告并将其转换为 `className`。目前有一个Open thread（截至2019年1月）讨论将 `className` 更改为 `class` 以减少混淆。
 
-## Good to hear
+## 关键点
 
-## Additional links
+## 额外参考
 
 <!-- tags: (react,javascript) -->
 

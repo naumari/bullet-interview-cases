@@ -1,6 +1,6 @@
 # 浏览器和 Node 事件循环的区别
 
-## Answer
+## 参考答案
 
 ### 游览器
 
@@ -36,11 +36,11 @@ Node 的事件循环是 libuv 实现的，引用一张官网的图，在 Node 11
 
 Node 11以后，和浏览器的行为统一了，都是每执行一个宏任务就执行完微任务队列。
 
-## Good to hear
+## 关键点
 
 * node 版本与 event loop 的关联
 
-## Additional links
+## 额外参考
 
 * [模拟实现 JS 引擎：深入了解 JS机制 以及 Microtask and Macrotask](https://juejin.im/post/5c4041805188252420629086)
 * [浏览器与Node的事件循环(Event Loop)有何区别](https://juejin.im/post/5c337ae06fb9a049bc4cd218#heading-12)

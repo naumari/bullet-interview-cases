@@ -1,6 +1,6 @@
 # CSS BEM 是什么
 
-## Answer
+## 参考答案
 
 **BEM**方法是CSS类的命名一种约定，通过定义命名空间来解决样式生效的作用域问题，从而使CSS更易于维护。
 
@@ -22,11 +22,11 @@
 }
 ```
 
-## Good to hear
+## 关键点
 
 * CSS-in-JS等范围问题的替代解决方案
 
-## Additional links
+## 额外参考
 
 * [Writing clean and maintainable CSS](https://hackernoon.com/writing-clean-and-maintainable-css-using-bem-methodology-1dcbf810a664)
 

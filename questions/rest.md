@@ -1,6 +1,6 @@
 # REST 是什么
 
-## Answer
+## 参考答案
 
 具象状态传输（REST，Representational State Transfer）是一组实现效率、可读性、还有可扩展分散式系统（scalable distributed system）的软体架构设计规范。如果一个系统能维持某些规范，他就是 RESTful。
 
@@ -15,11 +15,11 @@ REST 的基本概念是资源（resource）：例如说，文件能透过明确�
 * 更新: `/posts/:id` => PUT;
 * 删除: `/posts/:id` => DELETE。
 
-## Good to hear
+## 关键点
 
 * 这种模式的替代品，如GraphQL
 
-## Additional links
+## 额外参考
 
 * [What is REST — A Simple Explanation for Beginners, Part 1: Introduction
   ](https://medium.com/extend/what-is-rest-a-simple-explanation-for-beginners-part-1-introduction-b4a072f8740f)

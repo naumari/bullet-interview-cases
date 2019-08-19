@@ -1,6 +1,6 @@
 # 写 Vue 项目时为什么要在列表组件中写 key，其作用是什么
 
-## Answer
+## 参考答案
 
 key 的特殊属性主要用在 Vue 的虚拟 DOM 算法，在新旧 nodes 对比时辨识 VNodes。如果不使用 key，Vue 会使用一种最大限度减少动态元素并且尽可能的尝试修复/再利用相同类型元素的算法。使用 key，它会基于 key 的变化重新排列元素顺序，并且会移除 key 不存在的元素。
 
@@ -31,12 +31,12 @@ function sameVnode (a, b) {
 
 `patchVnode` 会依据 Vnode 的不同节点类型以及子节点的类型，对其进行复用更新。
 
-## Good to hear
+## 关键点
 
 * `key` 在 diff 时的作用;
 * 是否可以不添加 `key`。
 
-## Additional links
+## 额外参考
 
 * [组件更新](https://ustbhuangyi.github.io/vue-analysis/reactive/component-update.html#%E6%96%B0%E6%97%A7%E8%8A%82%E7%82%B9%E4%B8%8D%E5%90%8C)
 * [key](https://cn.vuejs.org/v2/api/#key)

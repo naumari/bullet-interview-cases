@@ -1,6 +1,6 @@
 # 构建一个数组，内容到第 n 项的 Fibonacci 序列
 
-## Answer
+## 参考答案
 
 ```es6
 const fibonacci = n =>
@@ -10,9 +10,9 @@ const fibonacci = n =>
   )
 ```
 
-## Good to hear
+## 关键点
 
-## Additional links
+## 额外参考
 
 * [Similar problem](https://github.com/Chalarangelo/30-seconds-of-code/blob/master/snippets_archive/fibonacciUntilNum.md)
 

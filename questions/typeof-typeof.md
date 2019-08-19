@@ -4,15 +4,15 @@
 typeof typeof 0
 ```
 
-## Answer
+## 参考答案
 
 它的运行结果为`“字符串”`。
 
 `typeof 0`求值为字符串`“number”`因此`typeof“number”`求值为``string“`。
 
-## Good to hear
+## 关键点
 
-## Additional links
+## 额外参考
 
 * [MDN docs for typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
 

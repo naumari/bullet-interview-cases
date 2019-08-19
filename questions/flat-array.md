@@ -1,6 +1,6 @@
 # 将数组扁平化并去除其中重复数据，最终得到一个升序且不重复的数组
 
-## Answer
+## 参考答案
 
 * 利用递归
 
@@ -22,9 +22,9 @@ console.log(arr.flat().unique().sort((a, b) => a - b))
 [...new Set(arr.toString().split(','))].sort((a,b) => a-b)
 ```
 
-## Good to hear
+## 关键点
 
-## Additional links
+## 额外参考
 
 <!-- tags: (javascript) -->
 

@@ -1,6 +1,6 @@
 # 什么是虚拟DOM，为什么它被广泛地使用在库/框架中
 
-## Answer
+## 参考答案
 
 虚拟DOM（VDOM）是一种映射，利用JavaScript对象形式来表示真实DOM。这些对象具有描述它们所代表的真实DOM节点的属性：节点名称，其属性和子节点。利用 VDOM 来映射到真实DOM的渲染，不需要包含操作DOM的方法，非常的轻量、简单。
 
@@ -42,11 +42,11 @@
 
 一旦旧的VDOM和新的VDOM之间的变化已经由框架的差异引擎计算得出，那么真正的DOM可以在最短的时间内有效地得到更新以匹配应用程序的新状态。
 
-## Good to hear
+## 关键点
 
 * 为什么访问DOM会如此昂贵。
 
-## Additional links
+## 额外参考
 
 * [The difference between Virtual DOM and DOM](http://reactkungfu.com/2015/10/the-difference-between-virtual-dom-and-dom/)
 

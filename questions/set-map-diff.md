@@ -1,6 +1,6 @@
 # 能介绍下 Set、Map、WeakSet、WeakMap 之间的区别以及各自适用于什么样的场景
 
-## Answer
+## 参考答案
 
 * Set
   * 成员唯一、无序且不重复
@@ -20,9 +20,9 @@
   * 键名是弱引用，键值可以是任意的，键名所指向的对象可以被垃圾回收，此时键名是无效的
   * 不能遍历，方法有get、set、has、delete
 
-## Good to hear
+## 关键点
 
-## Additional links
+## 额外参考
 
 * [ECMAScript 6 入门](http://es6.ruanyifeng.com/#docs/set-map/)
 

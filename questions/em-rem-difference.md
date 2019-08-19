@@ -1,6 +1,6 @@
 # 在 CSS 中 `em` 与 `rem` 有什么区别
 
-## Answer
+## 参考答案
 
 `em` 和 `rem` 都基于 `font-size` CSS属性，唯一的区别是他们从哪里继承的值。
 
@@ -9,11 +9,11 @@
 
 在大多数游览器中，根元素的 `font-size` 默认值为 `16px`。
 
-## Good to hear
+## 关键点
 
 * `em` 和 `rem` 的好处。
 
-## Additional links
+## 额外参考
 
 * [CSS units for font-size: px | em | rem](https://medium.com/code-better/css-units-for-font-size-px-em-rem-79f7e592bb97)
 

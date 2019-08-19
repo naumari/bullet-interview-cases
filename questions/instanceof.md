@@ -15,7 +15,7 @@ console.log(auto instanceof Object);
 // expected output: true
 ```
 
-## Answer
+## 参考答案
 
 `instanceof` 运算符用于测试构造函数的 `prototype` 属性是否出现在对象的原型链中的任何位置
 
@@ -38,9 +38,9 @@ console.log(usrInstanceOf(auto, Object));
 // expected output: true
 ```
 
-## Good to hear
+## 关键点
 
-## Additional links
+## 额外参考
 
 <!-- tags: (javascript) -->
 

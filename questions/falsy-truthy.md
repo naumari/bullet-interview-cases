@@ -1,6 +1,6 @@
 # 在 JavaScript 中的真值和假值都代表什么
 
-## Answer
+## 参考答案
 
 值是truthy或falsy，具体取决于它在布尔上下文中的计算方式。从本质上讲，它们是在执行某些操作时被强制为“true”或“false”的值。
 
@@ -27,9 +27,9 @@ Boolean([]) // true
 !![] // true
 ```
 
-## Good to hear
+## 关键点
 
-## Additional links
+## 额外参考
 
 * [Truthy on MDN](https://developer.mozilla.org/en/docs/Glossary/Truthy)
 * [Falsy on MDN](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)

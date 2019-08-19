@@ -8,7 +8,7 @@
 </div>
 ```
 
-## Answer
+## 参考答案
 
 将 `.row` 父项设置为 `display：flex;` 并使用 `flex` 简写属性为列类提供与其比值相对应的 `flex-grow` 值。
 
@@ -30,9 +30,9 @@
 }
 ```
 
-## Good to hear
+## 关键点
 
-## Additional links
+## 额外参考
 
 * [MDN docs for basic concepts of flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
 * [A complete guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)

@@ -9,7 +9,7 @@ add(1, 2)(3); // 6
 add(1, 2, 3); // 6
 ```
 
-## Answer
+## 参考答案
 
 ```es6
 function add(...args) {
@@ -28,17 +28,12 @@ console.log = (value) => {
 }
 ```
 
-## Good to hear
+## 关键点
 
-## Additional links
+## 额外参考
 
 * [请实现一个 add 函数，满足以下功能](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/134)
 
-<!-- tags: (问题所属类型，例如 javascript、css、html、react、vue) -->
+<!-- tags: (javascript) -->
 
-<!-- expertise: (0,1,2) -->
-<!-- Expertise levels:
-	0: easy
-	1: intermediate
-	2: hard
--->
+<!-- expertise: (1) -->

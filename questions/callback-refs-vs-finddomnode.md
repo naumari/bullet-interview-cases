@@ -1,6 +1,6 @@
 # 为什么推荐使用 callback refs 而非 findDOMNode()
 
-## Answer
+## 参考答案
 
 callback refs 比 `findDOMNode` API更受欢迎，因为 `findDOMNode` 阻止了将来React的某些改进。
 
@@ -28,11 +28,11 @@ class MyComponent extends Component {
 }
 ```
 
-## Good to hear
+## 关键点
 
 * Callback refs 优于 `findDOMNode`。
 
-## Additional links
+## 额外参考
 
 <!-- tags: (react,javascript) -->
 

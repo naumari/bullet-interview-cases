@@ -1,6 +1,6 @@
 # 在JavaScript中的表达式和语句有什么区别
 
-## Answer
+## 参考答案
 
 JavaScript中有两个主要的语法类别：表达式和语句。或者将它们融合在一起，称为表达式声明。它们大致概括为：
 
@@ -60,11 +60,11 @@ var x = y >= 0 ? y : -y
 
 这既是表达式又是语句，因为我们将变量`x`（语句）声明为求值（表达式）。
 
-## Good to hear
+## 关键点
 
 * 函数声明 vs 函数表达式
 
-## Additional links
+## 额外参考
 
 * [What is the difference between a statement and an expression?](https://stackoverflow.com/questions/12703214/javascript-difference-between-a-statement-and-an-expression)
 

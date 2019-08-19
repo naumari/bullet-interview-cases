@@ -1,6 +1,6 @@
 # 什么是 focus ring? 处理它们的正确解决方案是什么
 
-## Answer
+## 参考答案
 
 focus ring 是可聚焦元素（如按钮和锚标记）的可见轮廓。在不同游览器内核有着不同的样式，但通常它在元素周围显示为蓝色轮廓，表示它目前正在聚焦。
 
@@ -10,9 +10,9 @@ focus ring 是可聚焦元素（如按钮和锚标记）的可见轮廓。在不
 
 最好的解决方案是即将推出的伪选择器 `：focus-visible`，它现在可以用JavaScript来实现。如果用户使用键盘并且为鼠标用户隐藏它，它将仅显示对焦环。这保持了鼠标使用的美感和键盘使用的可访问性。
 
-## Good to hear
+## 关键点
 
-## Additional links
+## 额外参考
 
 * [:focus-visible](https://css-tricks.com/focus-visible-and-backwards-compatibility/)
 

@@ -1,6 +1,6 @@
 # 在 React 中元素和组件之间有什么区别
 
-## Answer
+## 参考答案
 
 元素通常用来表示DOM节点或组件的纯JavaScript对象。元素是纯粹的，从不转换，并且创建的代价很小。
 
@@ -12,12 +12,12 @@ const componentElement = <Component />
 const domNodeElement = <div />
 ```
 
-## Good to hear
+## 关键点
 
 * 元素是不可变的普通对象，用于描述要呈现的DOM节点或组件;
 * 组件可以是类或函数，它将props作为输入并返回元素树作为输出。
 
-## Additional links
+## 额外参考
 
 * [React docs on Rendering Elements](https://reactjs.org/docs/rendering-elements.html)
 * [React docs on Components and Props](https://reactjs.org/docs/components-and-props.html)

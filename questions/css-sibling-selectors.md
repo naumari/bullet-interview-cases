@@ -1,6 +1,6 @@
 # '+' 和 '~' 这两个兄弟选择之前有什么不同
 
-## Answer
+## 参考答案
 
 通用选择器 `~` 选择所有指定元素的兄弟元素。
 
@@ -22,9 +22,9 @@ div + p {
 <p>Hello world</p>
 ```
 
-## Good to hear
+## 关键点
 
-## Additional links
+## 额外参考
 
 * [W3School's CSS Combinators Page](https://www.w3schools.com/css/css_combinators.asp)
 * [Mozilla's Combinators and groups of selectors page](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors)

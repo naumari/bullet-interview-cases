@@ -13,7 +13,7 @@ console.log(b)
 console.log(b.x)
 ```
 
-## Answer
+## 参考答案
 
 ```es6
 let a = { n: 1 }
@@ -34,9 +34,9 @@ console.log(b.x) // { n: 2 }
 * 对 `a` 对象赋值，此时变量名 `a` 改变指向到对象 `{ n: 2 }`;
 * 对步骤1中 `x` 属性，也即 `a` 原指向对象的 `x` 属性，也即 `b` 指向对象的 `x` 属性赋值。
 
-## Good to hear
+## 关键点
 
-## Additional links
+## 额外参考
 
 <!-- tags: (javascript) -->
 

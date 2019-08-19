@@ -1,6 +1,6 @@
 # 缓存清除的目的是什么，如何实现
 
-## Answer
+## 参考答案
 
 浏览器具有缓存网站上临时文件的能力，因此在切换页面或重新加载同一页面时不需要再次重新下载它们。服务器设置为 Cache-Control 以及 Expires，告诉浏览器在给定的时间内存储文件。这大大提高了网站速度并保留了带宽。
 
@@ -15,9 +15,9 @@
 
 浏览器将其视为不同的文件，但无需更改文件名。
 
-## Good to hear
+## 关键点
 
-## Additional links
+## 额外参考
 
 <!-- Whenever possible, link a more detailed explanation. -->
 

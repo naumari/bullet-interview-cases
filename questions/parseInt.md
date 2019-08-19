@@ -1,6 +1,6 @@
 # `['1', '2', '3'].map(parseInt)` 的执行结果是么
 
-## Answer
+## 参考答案
 
 ```es6
 ['1', '2', '3'].map(parseInt) // log 1、NaN、NaN
@@ -23,9 +23,9 @@ arr.map(function callback(currentValue[, index[, array]]) {
 // parseInt("3", 2) 在二进制中，"3" 是非法字符，转换失败，返回 NaN。
 ```
 
-## Good to hear
+## 关键点
 
-## Additional links
+## 额外参考
 
 * [parseInt](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
 

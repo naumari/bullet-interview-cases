@@ -1,6 +1,6 @@
 # 在Javascript中，`this` 指针是什么？它是怎样工作的
 
-## Answer
+## 参考答案
 
 `this` 机制提供了更优雅的方式来隐含地“传递”一个对象引用，导致更加干净的API设计和更容易的复用。
 `this` 不是编译时绑定，而是运行时绑定。它依赖于函数调用的上下文条件。`this` 绑定与函数声明的位置没有任何关系，而与函数被调用的方式紧密相连。
@@ -99,14 +99,14 @@ var otherObj = {
 obj.doubleArr() // 1, 2, 3
 ```
 
-## Good to hear
+## 关键点
 
 * 在严格模式在，全局的 `this` 为 `undefined`，但是在非严格模式下 `this` 指向全局对象（游览器中是 `window`）;
 * `Function.prototype.call` 和 `Function.prototype.apply` 将执行函数的 `this` 上下文设置为第一个参数;
 * `Function.prototype.bind` 返回一个新函数，强制执行 `this` 上下文作为第一个参数，不能被其他函数更改;
 * 如果一个函数要求根据它的调用方式改变它的 `this` 上下文，你必须使用 `function` 关键字。当你想要“this”作为周围（词汇）上下文时，请使用箭头函数。
 
-## Additional links
+## 额外参考
 
 * [`this` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 

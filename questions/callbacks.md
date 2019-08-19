@@ -1,6 +1,6 @@
 # callback 是什么?你能否写一个简单的例子
 
-## Answer
+## 参考答案
 
 回调是作为参数传递给另一个函数的函数，该函数在事件发生或某个任务完成后执行，通常在异步代码中使用。回调函数稍后由一段代码调用，但可以在初始化时声明而不被调用.
 
@@ -25,12 +25,12 @@ const map = (arr, callback) => {
 map([1, 2, 3, 4, 5], n => n * 2) // [2, 4, 6, 8, 10]
 ```
 
-## Good to hear
+## 关键点
 
 * 函数是JavaScript中的第一类对象;
 * Callbacks vs Promises。
 
-## Additional links
+## 额外参考
 
 * [React docs on `setState`](https://reactjs.org/docs/react-component.html#setstate)
 

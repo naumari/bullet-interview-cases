@@ -1,6 +1,6 @@
 # 闭包是什么? 你能给出一个有用的例子吗
 
-## Answer
+## 参考答案
 
 闭包就是函数能够记住并访问它的词法作用域，即使当这个函数在它的词法作用域之外执行时。
 
@@ -28,13 +28,13 @@ foo();
 
 此外，闭包是存储私有数据同时阻止JavaScript从外部访问的唯一方法。它们是UMD（通用模块定义）模式的关键，它经常用于只暴露公共API但保持实现细节私有的库，防止与其他库或用户自己的代码发生名称冲突。
 
-## Good to hear
+## 关键点
 
 * 闭包非常有用，因为它们允许您将数据与对该数据进行操作的函数相关联;
 * 闭包只能用一种方法替换对象;
 * 闭包可用于模拟私有属性和方法。
 
-## Additional links
+## 额外参考
 
 * [你不懂JS：作用域与闭包](https://github.com/getify/You-Dont-Know-JS/blob/1ed-zh-CN/scope%20&%20closures/README.md#you-dont-know-js-scope--closures)
 

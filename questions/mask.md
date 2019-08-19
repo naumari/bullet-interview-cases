@@ -4,7 +4,7 @@
 mask("123456789") // "#####6789"
 ```
 
-## Answer
+## 参考答案
 
 > 有许多种方法来实现这个需求，下面展示其中一种
 
@@ -15,11 +15,11 @@ const mask = (str, maskChar = "#") =>
   str.slice(-4).padStart(str.length, maskChar)
 ```
 
-## Good to hear
+## 关键点
 
 * 如果解决方案有效，应该首选简短的函数式问题解决方案
 
-## Additional links
+## 额外参考
 
 <!-- tags: (javascript) -->
 

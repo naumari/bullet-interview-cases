@@ -1,68 +1,47 @@
 # Bullet interview cases
 
-> Short blurb about what your product does.
+> 洞见前端小程序的题库
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
-One to two paragraph statement about your product and what it does.
+每一个题目都是源自于实战、日常业务中碰到的小问题，希望能够以点带面，使得大家了解这些面试题背后的场景。
 
 ![Logo](https://github.com/FatGe/bullet-interview-cases/blob/master/assets/logo.svg)
 
-## Installation
-
-OS X & Linux:
+## 下载使用
 
 ```sh
-npm install my-crazy-module --save
+git clone https://github.com/FatGe/bullet-interview-cases
 ```
 
-Windows:
+## 小程序地址
+
+![二维码](https://github.com/FatGe/bullet-interview-cases/blob/master/assets/gh_e95d1f8069ea_258 (3).jpg)
+![小程序码](https://github.com/FatGe/bullet-interview-cases/blob/master/assets/gh_e95d1f8069ea_258 (2).jpg)
+
+## 使用方法
+
+整体项目以 ./question/* 为核心，通过 .md 的数据，可以生成对应的 .html 或者 json lines.
 
 ```sh
-edit autoexec.bat
+├── assets # 静态文件
+├── data # 对应的 json 数据，可以直接导入 MongoDB
+├── question # 数据、面试题目地址
+├── scripts # 编译脚本
+├── websites # 对应的 html 数据，可以作为 web-page 显示
+├── * # 配置文件
 ```
 
-## Usage example
+## Release 记录
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-_For more examples and usage, please refer to the [Wiki][wiki]._
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
-```
-
-## Release History
-
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
+* 0.0.2
+    * javascript-puzzlers 丰富题库
 * 0.0.1
-    * Work in progress
+    * 依据 30-seconds-of-interviews 构建基础题库
 
 ## Meta
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+Yzz – [@Yzz](https://juejin.im/user/5b3ed96c6fb9a04fc34bed91/posts) – duangci@aliyun.com
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
-
-## Contributing
+## 参与贡献
 
 1. Fork it (<https://github.com/yourname/yourproject/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)

@@ -32,11 +32,16 @@
     "@types/htmlparser2": "^3.10.1",
     "@types/markdown-it": "0.0.8",
     "@types/node": "^12.6.6",
+    "highlight.js": "^9.15.9",
     "himalaya": "^1.1.0",
     "htmlparser2": "^3.10.1",
+    "jsdom": "^15.1.1",
+    "language-classifier": "0.0.1",
     "markdown-it": "^9.0.1",
     "node-html-parser": "^1.1.16",
+    "prismjs": "^1.17.1",
     "promise-fs": "^2.1.1",
+    "towxml": "^2.1.4",
     "vue-template-compiler": "^2.6.10"
   }
 }

@@ -1,6 +1,6 @@
 # 描述 CSS Box 模型的布局并简要描述每个部分
 
-## Answer
+## 参考答案
 
 每个盒子由四个部分（或称区域）组成：内容边界 Content edge、内边距边界 Padding Edge、边框边界 Border Edge、外边框边界 Margin Edge。
 
@@ -22,12 +22,12 @@
 
 外边距区域的大小由 margin-top、margin-right、margin-bottom、margin-left，和简写属性 margin 控制。在发生外边距合并的情况下，由于盒之间共享外边距，外边距不容易弄清楚。
 
-## Good to hear
+## 关键点
 
 * 这是在前端采访中提出的一个非常常见的问题，虽然看起来很容易，但你知道这一点至关重要;
 * 显示对 DOM 的深刻理解。
 
-## Additional links
+## 额外参考
 
 * [W3School's CSS Box Model Page](https://www.w3schools.com/Css/css_boxmodel.asp)
 * [Mozilla's Intro to the CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)

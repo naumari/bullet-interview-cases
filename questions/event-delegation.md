@@ -1,6 +1,6 @@
 # 什么是事件委托，为什么它有用？ 你能举例说明如何使用它吗
 
-## Answer
+## 参考答案
 
 主要用于解决事件出来程序过多的问题。事件委托主要是利用了时间冒泡，只指定一个事件处理程序，就可以管理某一类的所有事件。
 
@@ -25,11 +25,11 @@ document.addEventListener("click", e => {
 })
 ```
 
-## Good to hear
+## 关键点
 
 * 事件捕获以及事件冒泡的区别
 
-## Additional links
+## 额外参考
 
 <!-- Whenever possible, link a more detailed explanation. -->
 

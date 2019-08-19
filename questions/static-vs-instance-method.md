@@ -1,6 +1,6 @@
 # 请解释下静态方法和实例方法之间的区别
 
-## Answer
+## 参考答案
 
 静态方法属于一个类，不作用于实例，而实例方法属于类的原型，它由类的所有实例继承并作用于它们。
 
@@ -19,11 +19,11 @@ arr.push(4)
 Array.push(arr, 4)
 ```
 
-## Good to hear
+## 关键点
 
 * 如何利用 ES2015 class 的语法来创建静态、实例方法
 
-## Additional links
+## 额外参考
 
 * [Classes on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 
