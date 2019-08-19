@@ -15,6 +15,7 @@ git clone https://github.com/FatGe/bullet-interview-cases
 ## 小程序地址
 
 ![二维码](https://github.com/FatGe/bullet-interview-cases/blob/master/assets/gh_e95d1f8069ea_258 (3).jpg)
+
 ![小程序码](https://github.com/FatGe/bullet-interview-cases/blob/master/assets/gh_e95d1f8069ea_258 (2).jpg)
 
 ## 使用方法
