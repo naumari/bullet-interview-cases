@@ -39,7 +39,7 @@
     "language-classifier": "0.0.1",
     "markdown-it": "^9.0.1",
     "node-html-parser": "^1.1.16",
-    "prismjs": "^1.17.1",
+    "prismjs": "^1.21.0",
     "promise-fs": "^2.1.1",
     "towxml": "^2.1.4",
     "vue-template-compiler": "^2.6.10"
