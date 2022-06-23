@@ -35,7 +35,7 @@
     "highlight.js": "^9.15.9",
     "himalaya": "^1.1.0",
     "htmlparser2": "^3.10.1",
-    "jsdom": "^15.1.1",
+    "jsdom": "^16.5.0",
     "language-classifier": "0.0.1",
     "markdown-it": "^9.0.1",
     "node-html-parser": "^1.1.16",
